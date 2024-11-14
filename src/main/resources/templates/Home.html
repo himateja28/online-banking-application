@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div th:insert="navbar :: navbar"></div>
+    <div class="container mt-5">
+          <div class="alert alert-info" th:if="${username != null}">
+            Welcome, <strong th:text="${username}"></strong>!
+        </div>
+        <div class="alert alert-info" th:if="${availableBalance != null}">
+            Your available balance is: <strong th:text="${availableBalance}"></strong>
+        </div>
+    </div>
+</body>
+</html>
